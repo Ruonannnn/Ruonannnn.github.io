@@ -2,80 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ruonan Sun</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #000000;
-    }
-    .section {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 5%;
-      box-sizing: border-box;
-    }
-    .left {
-      flex: 1;
-      text-align: left;
-    }
-    .right {
-      flex: 1;
-      text-align: center;
-    }
-    h1 {
-      font-size: 3.5em;
-      margin-bottom: 0.2em;
-    }
-    h2 {
-      font-weight: normal;
-      font-size: 1.5em;
-      margin-bottom: 1.5em;
-    }
-    .links a {
-      margin-right: 20px;
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-      font-size: 1.2em;
-    }
-    .links a:hover {
-      text-decoration: underline;
-    }
-
-    img.full-figure {
-      max-width: 100%;
-      height: auto;
-      border-radius: 0;
-      box-shadow: none;
-    }
-  </style>
+  <link rel="stylesheet" href="port.css" />
 </head>
 <body>
+  <header id="header" class="apple-hero-banner">
+    <nav class="apple-nav">
+      <ul>
+        <li><a href="#header">Home</a></li>
+        <li><a href="#carousel">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+      </ul>
+    </nav>
 
-  <!-- Home Section -->
-  <div class="section" id="home">
-    <div class="left">
-      <h1>Ruonan Sun</h1>
-      <h2>Data Science | Data Analytics | Business Analytics</h2>
-      <div class="links">
-        <a href="https://www.linkedin.com/in/ruonan-sun" target="_blank">LinkedIn</a>
-        <a href="https://github.com/Ruonannnn" target="_blank">GitHub</a>
-        <a href="mailto:ruonan.sun@duke.edu">Email</a>
+    <div class="banner-content">
+      <div class="text-block">
+        <h1>Ruonan Sun</h1>
+        <p class="tagline">Data Science | Data Analytics | Business Analytics</p>
+        <div class="hero-links">
+          <a href="mailto:ruonan.sun@duke.edu" title="Email"></a>
+          <a href="https://www.linkedin.com/in/ruonan-sun/" target="_blank" title="LinkedIn"></a>
+          <a href="https://github.com/Ruonannnn" target="_blank" title="GitHub"></a>
+        </div>
+      </div>
+      <div class="image-block">
+        <img src="images/profile_new.PNG" alt="Photo of Ruonan" />
       </div>
     </div>
-    <div class="right">
-      <img 
-        src="images/profile_new.PNG"
-        alt="Photo of Ruonan" 
-        class="full-figure"
-      >
-    </div>
-  </div>
-
-</body>
-</html>
+  </header>
