@@ -14,7 +14,6 @@
     .section {
       height: 100vh;
       display: flex;
-      flex-direction: row;
       align-items: center;
       justify-content: center;
       padding: 0 5%;
@@ -47,10 +46,12 @@
     .links a:hover {
       text-decoration: underline;
     }
-    img {
-      width: 220px;
-      border-radius: 50%;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    /* 新增：完整人像，不做圆形 */
+    img.full-figure {
+      max-width: 100%;
+      height: auto;
+      border-radius: 0;
+      box-shadow: none;
     }
   </style>
 </head>
@@ -58,7 +59,6 @@
 
   <!-- Home Section -->
   <div class="section" id="home">
-    <!-- Left: Text -->
     <div class="left">
       <h1>Ruonan Sun</h1>
       <h2>Data Science | Data Analytics | Business Analytics</h2>
@@ -68,11 +68,14 @@
         <a href="mailto:ruonan.sun@duke.edu">Email</a>
       </div>
     </div>
-
-    <!-- Right: Image -->
-      <div class="right">
-        <img src="images/profile_new.PNG" alt="Photo of Ruonan" style="max-width: 100%; height: auto;">
-      </div>
+    <div class="right">
+      <!-- 用 class="full-figure" 引用新的 CSS -->
+      <img 
+        src="images/profile.png" 
+        alt="Photo of Ruonan" 
+        class="full-figure"
+      >
+    </div>
   </div>
 
 </body>
