@@ -10,13 +10,22 @@
       font-family: Arial, sans-serif;
       background-color: #ffffff;
       color: #000000;
-      text-align: center;
     }
     .section {
       height: 100vh;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      align-items: center;
       justify-content: center;
+      padding: 0 5%;
+    }
+    .left {
+      flex: 1;
+      text-align: left;
+    }
+    .right {
+      flex: 1;
+      text-align: center;
     }
     h1 {
       font-size: 4em;
@@ -28,7 +37,7 @@
       margin-bottom: 1.5em;
     }
     .links a {
-      margin: 0 15px;
+      margin-right: 20px;
       text-decoration: none;
       color: #000;
       font-weight: bold;
@@ -37,32 +46,32 @@
     .links a:hover {
       text-decoration: underline;
     }
+    img {
+      width: 220px;
+      border-radius: 50%;
+    }
   </style>
 </head>
 <body>
 
   <!-- Home Section -->
+  <div class="section" id="home">
+    <!-- Left: Text -->
+    <div class="left">
+      <h1>Ruonan Sun</h1>
+      <h2>Data Science | Data Analytics | Business Analytics</h2>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/ruonan-sun" target="_blank">LinkedIn</a>
+        <a href="https://github.com/Ruonannnn" target="_blank">GitHub</a>
+        <a href="mailto:ruonan.sun@duke.edu">Email</a>
+      </div>
+    </div>
 
-  <div class="section" id="home" style="flex-direction: row; align-items: center; justify-content: center;">
-
-  <!-- Left: Text info -->
-  <div style="flex: 1; text-align: left; padding-left: 5%;">
-    <h1>Ruonan Sun</h1>
-    <h2>Data Science | Data Analytics | Business Analytics</h2>
-    <div class="links">
-      <a href="https://www.linkedin.com/in/ruonan-sun" target="_blank">LinkedIn</a>
-      <a href="https://github.com/Ruonannnn" target="_blank">GitHub</a>
-      <a href="mailto:ruonan.sun@duke.edu">Email</a>
+    <!-- Right: Image -->
+    <div class="right">
+      <img src="images/profile.jpg" alt="Profile photo">
     </div>
   </div>
 
-  <!-- Right: Profile image -->
-  <div style="flex: 1; text-align: center; padding-right: 5%;">
-    <img src="images/profile.jpg" alt="Profile photo" style="width: 220px; border-radius: 50%;">
-  </div>
-
-</div>
-
 </body>
 </html>
-
