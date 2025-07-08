@@ -818,10 +818,13 @@ color: #000;
 /* “×” close button */
 .sports-modal-close {
   position: absolute;
-  top: 0.1rem; right: 0.5rem;
+  top: 0.5rem;
+  right: 0.5rem;
   color: #fff;
-  background: transparent;
+  background: rgba(0,0,0,0.4);   /* optional: make it easier to see */
   border: none;
   font-size: 3rem;
   cursor: pointer;
+
+  z-index: 1001;                /* ← add this */
 }
