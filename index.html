@@ -288,14 +288,17 @@
         </button>
       </div>
 
-      <!-- 卡片 3：Chasing Balls, Catching Joy -->
+      <!-- 卡片 3：My Baseball Side -->
       <div class="beyond-card">
-        <h3>Chasing Balls, Catching Joy</h3>
+        <h3>My Baseball Side</h3>
         <p>
-          From the sharp bounce of a squash ball to the crack of a baseball bat, I’m a huge fan of anything that involves chasing balls — especially badminton, squash, and watching MLB games. 
-          These sports keep me energized and sharpen my focus both on and off the court.
+          I’ve always loved baseball — the rhythm, the strategy, the shared heartbreak. And yes, I cheer a little bit louder when it’s the Dodgers. 
+          I still remember the four home runs in one inning, and that walk-off hit that rewrote the game. 
+          That’s baseball - you never know what’s gonna happen until the last pitch.
         </p>
-        <button class="beyond-card__button" style="font-size: 18px;" onclick="openModal('sports')">Watch my sports moment →</button>
+        <button class="beyond-card__button" style="font-size: 18px;" onclick="openSportsModalSports()">
+          Watch my sports moment →
+        </button>
       </div>
     </div>
   </div>
@@ -322,20 +325,26 @@
     </div>
   </div>
 
-<!-- Sports Modal -->
-<div id="modal-sports" class="modal">
-  <div class="modal-backdrop" onclick="closeModal('sports')"></div>
-  <div class="modal-content">
-    <button class="modal-close" onclick="closeModal('sports')">&times;</button>
-    <h1 style="text-align: center;">The Year I Turned Theorem into Impact</h1>
-    <br>
-    <div style="width: 100%; margin-bottom: 1rem; overflow: hidden; border-radius: 12px;">
-      <img src="UCI-SIGNAGE-1600x960-1.jpg" alt="UCI image" style="width: 100%; height: auto; display: block;">
-    </div>
+<!-- Sports Modal Overlay -->
+<div
+  id="sportsModalSports"
+  class="sports-modal-overlay"
+  onclick="closeSportsModalSports()">
 
-    <p style="font-size: 1.2rem;">
-    e than academics — I learned resilience, independence, and how to navigate the world as an adult.
-    </p>
+  <div
+    class="sports-modal-content"
+    onclick="event.stopPropagation()">
+    
+    <button
+      class="sports-modal-close"
+      onclick="closeSportsModalSports()">×</button>
+
+    <video
+      id="sportsVideoSports"
+      width="800"
+      controls>
+      <source src="images/baseball.MP4" type="video/mp4" />
+    </video>
   </div>
 </div>
   
@@ -376,7 +385,22 @@
     }
 </script>
 
+<script>
+  function openSportsModalSports() {
+    const overlay = document.getElementById('sportsModalSports');
+    const video   = document.getElementById('sportsVideoSports');
+    overlay.style.display = 'flex';
+    video.currentTime = 0;
+    video.play().catch(console.error);
+  }
 
+  function closeSportsModalSports() {
+    const overlay = document.getElementById('sportsModalSports');
+    const video   = document.getElementById('sportsVideoSports');
+    video.pause();
+    overlay.style.display = 'none';
+  }
+</script>
 
 <!-- Skills Section -->
 <section id="skills" class="section">
