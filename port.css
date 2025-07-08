@@ -796,7 +796,7 @@ color: #000;
 
 /* Backdrop overlay */
 .sports-modal-overlay {
-  display: none;               /* Hidden by default */
+  display: none;              
   position: fixed;
   top: 0; left: 0;
   width: 100vw; height: 100vh;
@@ -806,31 +806,22 @@ color: #000;
   z-index: 1000;
 }
 
-/* No background box for content, only for positioning and close button */
+/* Modal content */
 .sports-modal-content {
   position: relative;
   padding: 0;
-  border-radius: 0;
   background: transparent;
-  box-shadow: none;
   max-width: 90%;
   max-height: 90%;
 }
 
-/* "×" close button */
+/* “×” close button */
 .sports-modal-close {
   position: absolute;
   top: 0.1rem; right: 0.5rem;
-  color : #fff;
+  color: #fff;
   background: transparent;
   border: none;
   font-size: 3rem;
   cursor: pointer;
 }
-
-/* Make the overlay a flex container */
-.sports-modal-overlay {
-  display: flex;
-}
-
-
