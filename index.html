@@ -1,36 +1,634 @@
+<!-- Home Section -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ruonan Sun</title>
-  <link rel="stylesheet" href="port.css" />
-</head>
-<body>
-  <header id="header" class="apple-hero-banner">
-    <nav class="apple-nav">
-      <ul>
-        <li><a href="#header">Home</a></li>
-        <li><a href="#carousel">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#skills">Skills</a></li>
-      </ul>
-    </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruonan Sun</title>
+    <link rel="stylesheet" href="port.css" />
+    <!-- Splide loop -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@splidejs/splide@latest/dist/css/splide.min.css"
+    />
+    <script
+      src="https://unpkg.com/@splidejs/splide@latest/dist/js/splide.min.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header id="header" class="apple-hero-banner">
+      <nav class="apple-nav">
+        <ul>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#beyond">Beyond Work</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#Contact">Contact</a></li>
+        </ul>
+      </nav>
 
-    <div class="banner-content">
-      <div class="text-block">
-        <h1>Ruonan Sun</h1>
-        <p class="tagline">Data Science | Data Analytics | Business Analytics</p>
-        <div class="hero-links">
-          <a href="mailto:ruonan.sun@duke.edu" title="Email"></a>
-          <a href="https://www.linkedin.com/in/ruonan-sun/" target="_blank" title="LinkedIn"></a>
-          <a href="https://github.com/Ruonannnn" target="_blank" title="GitHub"></a>
+      <div class="banner-content">
+        <div class="text-block">
+          <h1>Ruonan Sun</h1>
+          <p class="tagline">Data Science | Data Analytics | Business Analytics</p>
+          <p class="intro-line">
+            <div class="hero-links">
+              <a href="mailto:ruonan.sun@duke.edu" title="Email">
+                <img src="png-clipart-computer-icons-email-desktop-email-miscellaneous-angle-thumbnail-removebg-preview.png"
+                  alt="Email" style="height: 43px; vertical-align: middle;" />
+              </a>
+              <a href="https://www.linkedin.com/in/ruonan-sun/" target="_blank" title="LinkedIn">
+                <img src="linkedin.png" alt="LinkedIn" style="height: 55px; vertical-align: middle;" />
+              </a>
+              <a href="https://github.com/Ruonannnn" target="_blank" title="GitHub">
+                <img src="github_logo-removebg-preview.png" alt="GitHub" style="height: 40px; vertical-align: middle;" />
+              </a>
+              <br />
+              <a href="javascript:void(0);" class="intro-link-btn" style="font-size: 1.1rem;" onclick="toggleIntro()">Read my full introduction →</a>
+            </div>
+          </p>
+        </div>
+        <div class="image-block">
+          <img src="profile_new.PNG" alt="Photo of Ruonan" />
         </div>
       </div>
-      <div class="image-block">
-        <img src="images/profile_new.PNG" alt="Photo of Ruonan" />
+    </header>
+    <!-- Intro Popup -->
+    <div id="intro-popup" class="intro-popup">
+      <div class="intro-content">
+        <span class="close-btn" onclick="toggleIntro()">&times;</span>
+        <h2>Hi, I'm Ruonan Sun</h2>
+        <br />
+        <p></p>
+          I'm a data scientist and analyst with strong training in mathematics foundation and hands-on experience in building machine learning models, deep learning models, dashboard reporting, and turning unstructured data into insights thus create real business value. I hold a Master's in Business Analytics from Duke and a Bachelor's in Mathematics from UCI.
+          <br /><br />
+          People often say I have strong analytical thinking and intellectual rigor. I dive deep into problems to understand their root causes, but also stay flexible and creative enough to adapt quickly and deliver solutions. Whether working independently or in a team, I thrive in roles that demand both precision and adaptability.
+        </p>
       </div>
     </div>
-  </header>
+
+
+<!-- Projects Section -->
+<section id="projects" class="projects">
+  <h2>Selected Projects</h2>
+  <div id="splide" class="splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+
+        <li class="splide__slide">
+          <div class="card">
+            <img src="20170815a-max-pixel.jpg" alt="Plant Leaves Classifier"/>
+            <div class="card-body">
+              <h3>Plant Leaves Classifier</h3>
+              <p>Accurate classification using deep learning techniques.</p>
+              <a href="https://github.com/Ruonannnn/image-classification-deep-learning" target="_blank">GitHub →</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="splide__slide">
+          <div class="card">
+            <img src="PJM020719Q202_Luxe_WanakaNZ_LivingRoom_0264-LightOn_R1.webp" alt="Flight Delay Prediction"/>
+            <div class="card-body">
+              <h3>Airbnb Price Prediction</h3>
+              <p>Pricing optimization with machine learning models and feature engineering.</p>
+              <a href="https://github.com/Ruonannnn/airbnb-price-prediction" target="_blank">GitHub →</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="splide__slide">
+          <div class="card">
+            <img src="UnequalScenes_Mumbai-12-grad2.webp" alt="Urban Equity Analysis"/>
+            <div class="card-body">
+              <h3>Urban Equity Analysis</h3>
+              <p>Storytelling dashboards reveal infrastructure and investment disparities.</p>
+              <button class="btn learn-more" onclick="openModal('urban')">Read →</button>
+            </div>
+          </div>
+        </li>
+
+        <li class="splide__slide">
+          <div class="card">
+            <img src="north-carolina-gun-laws.jpg" alt="Gun Law Causal Inference"/>
+            <div class="card-body">
+              <h3>Gun Law Causal Inference</h3>
+              <p>Using panel regression and synthetic control to estimate policy impact on crime.</p>
+              <a href="https://github.com/Ruonannnn/causal-impact-gun-law" target="_blank">GitHub →</a>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Urban Equity Analysis Modal -->
+<div id="modal-urban" class="modal">
+  <div class="modal-backdrop" onclick="closeModal('urban')"></div>
+  <div class="modal-content urban-modal">
+    <button class="modal-close" onclick="closeModal('urban')">&times;</button>
+
+    <h2 style="text-align: center;">Urban Resource Distribution Dashboards</h2>
+    <br>
+    <h3>Project Summary</h3>
+    <p>
+      As the team lead of a five-member group, I spearheaded a data-driven urban equity project to uncover spatial disparities in public resource allocation and investment across Cary, NC.
+      We processed and visualized over 100,000 records from nine municipal datasets, aiming to identify underdeveloped ZIP-code areas and provide data-driven support for more equitable urban planning decisions.
+    </p>
+    <br>
+    <h3>What We Did</h3>
+    <ul>
+      <li> Utilized SQL and Python to clean, integrate, and analyze a wide range of municipal data, including demographics, public infrastructure, safety incidents, and construction activity.</li>
+      <li>Built interactive Tableau dashboards combining geospatial maps, time-series line charts, word clouds, and KPI indicators to provide a multidimensional view of public resource allocation, enabling stakeholders to visually compare public facility investment, service accessibility, and construction trends.</li>
+      <li>Translated visual insights into policy recommendations, highlighting geographic imbalances and proposing targeted strategies to redirect resources, prioritize investments, and ensure sustainable urban growth.</li>
+    </ul>
+    <br>
+ <h3>Our dashboards support strategic urban planning decisions such as:</h3>
+ <ul>
+      <li>Emergency response planning and fire/police resource allocation</li>
+      <li>Commercial development planning based on localized brand presence</li>
+      <li>Forecasting infrastructure pressure in fast-growing neighborhoods</li>
+      <li>Attracting investment to underserved areas through targeted incentives</li>
+    </ul>
+
+    <div class="modal-gallery" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+      <img src="截屏2025-07-07 上午2.11.59.png" alt="Dashboard 1" style="width: 100%; object-fit: cover;">
+      <img src="截屏2025-07-07 上午2.13.20.png" alt="Dashboard 2" style="width: 100%; object-fit: cover;">
+      <img src="截屏2025-07-07 上午2.19.27.png" alt="Dashboard 3" style="width: 100%; object-fit: cover;">
+      <img src="截屏2025-07-07 上午2.14.56.png" alt="Dashboard 4" style="width: 100%; object-fit: cover;">
+    </div>
+
+  </div>
+</div>
+
+<!-- Education Section -->
+<section id="education" class="section">
+  <div class="section-inner">
+    <h2 class="section-title">Education</h2>
+  </div>
+  <div class="edu-exp-grid">
+    <div class="edu-exp-card" style="background: linear-gradient(to bottom, #d0e9ff, #ffffff); text-align: center; border-radius: 0;">
+      <img src="Duke-University-Logo.png" alt="Duke University" style="width: 330px; height: auto; margin-bottom: 1rem;" />
+      <h4 style="font-size: 2rem;">Duke University</h4>
+      <p style="font-size: 1.25rem;">Master of Quantitative Management in Business Analytics<br><strong>Graduated May 2025</strong></p>
+      <button class="btn learn-more" onclick="openModal('duke')">Learn more</button>
+    </div>
+
+    <div class="edu-exp-card" style="background-color: #edf0f1; text-align: center; border-radius: 0;">
+      <img src="UC_Irvine_Anteaters_logo.svg.png" alt="University of California, Irvine">
+      <h4 style="font-size: 2rem;">University of California, Irvine</h4>
+      <p style="font-size: 1.25rem;">Bachelor of Science in Mathematics<br><strong>Graduated June 2024</strong></p>
+      <button class="btn learn-more" onclick="openModal('up')">Learn more</button>
+    </div>
+  </div>
+</section>
+
+<!-- Duke Modal -->
+<div id="modal-duke" class="modal">
+  <div class="modal-backdrop" onclick="closeModal('duke')"></div>
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('duke')">&times;</button>
+    <h1 style="text-align: center;">The Year I Turned Theorem into Impact</h1>
+    <br>
+    <div style="width: 100%; margin-bottom: 1rem; overflow: hidden; border-radius: 12px;">
+      <img src="279fbd378742d915f26879ab20807934.jpg" alt="Duke University" style="width: 100%; height: auto; display: block;">
+    </div>
+
+      <h2>Why I Joined</h2>
+      <p style="font-size: 1.2rem;">
+        After years of studying mathematics and building a strong theoretical foundation, I wanted to see how those ideas could be turned into real-world impact.
+    I joined Duke's MQM program to bridge that gap — to take the technical foundation I had built and apply it to practical problems that matter in business and society.
+  </p>
+    <br>
+    <h2>What I Gained</h2>
+    <p style="font-size: 1.2rem;">
+    My time at Fuqua was as intense as it was rewarding. In the classroom, I gained cutting-edge knowledge and practical skills that helped me grow into a data professional.
+  I earned a 3.98 GPA and was honored as a Fuqua Scholar — a recognition awarded to the top 10% of the class.
+  And I had the chance to work on real-world datasets and collaborate with companies, learning directly from fantastic professors who brought both academic depth and business experience.
+  <br><br>
+  One of the most unforgettable moments was our capstone project. The data we collected, the model we built, and the presentation we delivered truly helped our client solve a tough business challenge and shape their strategy.
+  When they told us, <em>"It really helped us a lot."</em> — that simple sentence meant more than any grade.
+</p>
+
+<br>
+    <h2>How I Changed</h2>
+    <p style="font-size: 1.2rem;">
+    Before Fuqua, I was someone who preferred to work independently — focused, efficient, and self-reliant. But at Fuqua, everything was built around intense team collaboration. 
+    Whether it was late-night project crunches or navigating diverse viewpoints, I learned how to lead with empathy, communicate under pressure, and genuinely enjoy building something together with others. 
+    Along the way, I built friendships that I know will last a lifetime — people I laughed with, struggled with, and succeeded with. That's the heart of Team Fuqua: we didn’t just work in teams, we grew in them.
+  <br><br>
+  Outside the classroom, I also pushed my own boundaries — like joining the campus magic club and learning a new card trick every week.
+  These moments, both big and small, reminded me that growth happens when you step outside your comfort zone.
+  </p>
+
+  </div>
+</div>
+
+<!-- UCI Modal -->
+<div id="modal-up" class="modal">
+  <div class="modal-backdrop" onclick="closeModal('up')"></div>
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('up')">&times;</button>
+    <h1 style="text-align: center;">The Year I Turned Theorem into Impact</h1>
+    <br>
+    <div style="width: 100%; margin-bottom: 1rem; overflow: hidden; border-radius: 12px;">
+      <img src="UCI-SIGNAGE-1600x960-1.jpg" alt="UCI image" style="width: 100%; height: auto; display: block;">
+    </div>
+
+    <p style="font-size: 1.2rem;">
+    When I first arrived at UC Irvine, I was an international student filled with both curiosity and uncertainty
+     — unsure about my path, unfamiliar with the environment, everything intimidated but exciting. 
+     But Southern California welcomed me with perfect weather, passion and a sense of freedom that slowly comforted me. 
+     It became a place where I could wander, explore and love forever.
+    <br><br>
+     Over time, I not only found confidence in my daily life, but also made meaningful strides academically.
+     Studying mathematics trained me to think rigorously and logically — to break down complexity and tackle problems with structure and patience. 
+     I was fortunate to make the Dean’s Honor List every year, serve as a teaching assistant for two advanced courses, and work as a research assistant in high-dimensional probability. 
+     These experiences not only strengthened my academic foundation, but also sparked my passion for data and analysis.
+    <br><br>
+    I also experienced many personal milestones. UC Irvine also gave me many life firsts: my first time cooking for myself, my first late-night study session until 3 a.m., my first driver’s license, and my first outdoor movie under the stars. 
+    These moments may seem small, but together, they shaped me. 
+    UCI taught me more than academics — I learned resilience, independence, and how to navigate the world as an adult.
+    </p>
+  </div>
+</div>
+
+
+<!-- Beyond Work Section -->
+<section id="beyond" class="section">
+  <div class="section-inner">
+    <h2 class="section-title">Beyond Work</h2>
+    <div class="beyond-grid">
+      <!-- 卡片 1：Souvenirs with Stories -->
+      <div class="beyond-card">
+        <h3>Souvenirs with Stories</h3>
+        <p>
+          I love traveling not just to see new places, but to collect pieces of them —
+          especially fridge magnets. Each one reminds me of a moment, a street, a
+          conversation… tiny, colorful memory capsules that live on my kitchen wall.
+        </p>
+        <button class="beyond-card__button" onclick="openBeyondModal('travel')">
+          View My Footprints →
+        </button>
+      </div>
+
+      <!-- 卡片 2：Soundtrack to My Life -->
+      <div class="beyond-card">
+        <h3>Soundtrack to My Life</h3>
+        <p>
+          Whether it's vibing to K-pop choreography or diving into mellow jazz on a late night, music isn’t just background noise — it’s part of how I connect with the world and recharge. (Yes, I have a playlist for every mood.)
+        </p>
+        <button class="beyond-card__button" onclick="window.open('https://open.spotify.com/playlist/1ved0sqasGCA2Jg6l54rCG', '_blank')">
+          Listen My Playlist →
+        </button>
+      </div>
+
+      <!-- 卡片 3：Chasing Balls, Catching Joy -->
+      <div class="beyond-card">
+        <h3>Chasing Balls, Catching Joy</h3>
+        <p>
+          From the sharp bounce of a squash ball to the crack of a baseball bat, I’m a huge fan of anything that involves chasing balls — especially badminton, squash, and watching MLB games. 
+          These sports keep me energized and sharpen my focus both on and off the court.
+        </p>
+        <button class="beyond-card__button" onclick="openModal('sports')">Watch my sports moment →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- beyond-gallery Modal -->
+  <div id="beyond-modal" class="beyond-modal">
+    <div class="beyond-modal-overlay" onclick="closeBeyondModal()"></div>
+    <div class="beyond-modal-content">
+      <span class="beyond-close-button" onclick="closeBeyondModal()">&times;</span>
+      <div class="beyond-gallery-slider">
+        <img src="IMG_0007.JPG" alt="Footprint 1" />
+        <img src="截屏2025-07-07 下午9.09.54.png" alt="Footprint 2" />
+        <img src="IMG_5039.jpg" alt="Footprint 3" />
+        <img src="截屏2025-07-07 下午9.10.38.png" alt="Footprint 4" />
+        <img src="DSC_7744.JPG" alt="Footprint 5" />
+      </div>
+      <button class="beyond-nav-button prev" onclick="prevBeyondSlide()">‹</button>
+      <button class="beyond-nav-button next" onclick="nextBeyondSlide()">›</button>
+    </div>
+  </div>
+
+<!-- Sports Modal -->
+<div id="modal-sports" class="modal">
+  <div class="modal-backdrop" onclick="closeModal('sports')"></div>
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('sports')">&times;</button>
+    <h1 style="text-align: center;">The Year I Turned Theorem into Impact</h1>
+    <br>
+    <div style="width: 100%; margin-bottom: 1rem; overflow: hidden; border-radius: 12px;">
+      <img src="UCI-SIGNAGE-1600x960-1.jpg" alt="UCI image" style="width: 100%; height: auto; display: block;">
+    </div>
+
+    <p style="font-size: 1.2rem;">
+    e than academics — I learned resilience, independence, and how to navigate the world as an adult.
+    </p>
+  </div>
+</div>
+  
+<script>
+    let currentBeyondIndex = 0;
+    function openBeyondModal() {
+      currentBeyondIndex = 0;
+      updateBeyondSlides();
+      document.getElementById('beyond-modal').classList.add('show');
+    }
+    function closeBeyondModal() {
+      document.getElementById('beyond-modal').classList.remove('show');
+    }
+    function updateBeyondSlides() {
+      const slides = Array.from(document.querySelectorAll('#beyond-modal .beyond-gallery-slider img'));
+      const len = slides.length;
+      slides.forEach(img => {
+        img.className = '';
+        img.style.display = 'none';
+      });
+      const idxAt = offset => (currentBeyondIndex + offset + len) % len;
+      // assign classes for 5 positions
+      slides[idxAt(-2)].classList.add('left2'); slides[idxAt(-2)].style.display = 'block';
+      slides[idxAt(-1)].classList.add('left');  slides[idxAt(-1)].style.display = 'block';
+      slides[idxAt(0)].classList.add('active'); slides[idxAt(0)].style.display = 'block';
+      slides[idxAt(1)].classList.add('right'); slides[idxAt(1)].style.display = 'block';
+      slides[idxAt(2)].classList.add('right2'); slides[idxAt(2)].style.display = 'block';
+    }
+    function nextBeyondSlide() {
+      const slides = document.querySelectorAll('#beyond-modal .beyond-gallery-slider img');
+      currentBeyondIndex = (currentBeyondIndex + 1) % slides.length;
+      updateBeyondSlides();
+    }
+    function prevBeyondSlide() {
+      const slides = document.querySelectorAll('#beyond-modal .beyond-gallery-slider img');
+      currentBeyondIndex = (currentBeyondIndex - 1 + slides.length) % slides.length;
+      updateBeyondSlides();
+    }
+</script>
+
+
+
+<!-- Skills Section -->
+<section id="skills" class="section">
+  <div class="section-inner">
+    <h2 class="section-title">Technical Skills</h2>
+
+    <div class="skills-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, auto); gap: 2rem;">
+      <!-- Row 1, Col 1 -->
+      <div class="skill-category">
+        <h3>Programming Languages & Libraries</h3>
+        <ul class="skill-list">
+          <li>Python </li>
+          <li>R</li>
+          <li>SQL</li>
+          <li>MATLAB</li>
+          <li>PyTorch</li>
+              <li>TensorFlow</li>
+              <li>scikit-learn</li>
+              <li>pandas</li>
+              <li>NumPy</li>
+        </ul>
+      </div>
+      <!-- Row 1, Col 2 -->
+      <div class="skill-category">
+        <h3>Statistical Methods & Experimental Design</h3>
+        <ul class="skill-list">
+          <li>A/B Testing</li>
+          <li>Hypothesis Testing</li>
+          <li>PCA</li>
+          <li>Time Series Analysis</li>
+          <li>Causal Inference</li>
+          <li>Bayesian Statistics</li>
+          
+        </ul>
+      </div>
+      <!-- Row 1, Col 3 -->
+      <div class="skill-category">
+        <h3>Machine Learning & Deep Learning Models</h3>
+        <ul class="skill-list">
+          <li>Linear & Logistic Regression</li>
+          <li>Random Forests</li>
+          <li>LASSO</li>
+          <li>Clustering</li>
+          <li>CNNs</li>
+          <li>RNNs</li>
+          <li>LLMs</li>
+          <li>LLM prompts</li>
+          <li>Natural Language Processing</li>
+          <li>transformers</li>
+
+        </ul>
+      </div>
+      <!-- Row 2, Col 1 -->
+      <div class="skill-category">
+        <h3>Data Visualization</h3>
+        <ul class="skill-list">
+          <li>Tableau</li>
+          <li>Power BI</li>
+          <li>Seaborn</li>
+          <li>Matplotlib</li>
+          <li>ggplot2</li>
+          <li>Pivot Tables</li>
+        </ul>
+      </div>
+      <!-- Row 2, Col 2 -->
+      <div class="skill-category">
+        <h3>Advanced Excel</h3>
+        <ul class="skill-list">
+          <li>Solver</li>
+          <li>Decision Tree</li>
+          <li>Monte Carlo Simulation</li>
+          <li>VBA</li>
+          <li>VLOOKUP</li>
+        </ul>
+      </div>
+      <!-- Row 2, Col 3 -->
+      <div class="skill-category">
+        <h3>Other Tools</h3>
+        <ul class="skill-list">
+          <li>Git & GitHub</li>
+          <li>Jupyter Notebook</li>
+          <li>VS Code</li>
+          <li>Airflow</li>
+          <li>LaTeX</li>
+          <li>Microsoft Office</li>
+          <li>Google Workspace</li>
+        </ul>
+      </div>
+    </div>
+
+</section>
+
+
+<!-- Contact Section -->
+<section id="Contact" class="contact-section">
+  <div class="section-inner">
+    <h2>Let's Connect!</h2>
+    <form id="contact-form" class="contact-form">
+
+      <!-- First Row：First / Last -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="first_name">First Name</label>
+          <input type="text" id="first_name" name="first_name" placeholder="First">
+        </div>
+        <div class="form-group">
+          <label for="last_name">Last Name</label>
+          <input type="text" id="last_name" name="last_name" placeholder="Last">
+        </div>
+      </div>
+
+      <!-- Second Row：Email -->
+      <div class="form-row">
+        <div class="form-group full">
+          <label for="email">Email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+      </div>
+
+      <!-- Third Row：Message -->
+      <div class="form-row">
+        <div class="form-group full">
+          <label for="message">Message <span class="required">*</span></label>
+          <textarea id="message" name="message" rows="5" placeholder="Leave me a few words" required></textarea>
+        </div>
+      </div>
+
+      <button
+        type="submit"
+        class="btn-submit"
+      >
+        Send
+      </button>
+    </form>
+  </div>
+</section>
+
+
+<!-- Scripts -->
+
+<!-- Intro Popup Script -->
+<script>
+  function toggleIntro() {
+    const popup = document.getElementById("intro-popup");
+    popup.style.display = popup.style.display === "flex" ? "none" : "flex";
+  }
+</script>
+
+<!-- Initialize Splide -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    new Splide("#splide", {
+      type: "slide", 
+      perPage: 1,
+      fixedWidth: "400px",
+      focus: "center",
+      gap: "2rem",
+      trimSpace: false,
+      rewind: true, 
+      autoplay: true,
+      interval: 3500, 
+      speed: 600, 
+      pauseOnHover: true,
+      arrows: true,
+      pagination: true, 
+    }).mount();
+  });
+</script>
+
+<!-- Navigation Highlight Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('header[id], section[id]');
+    const navLinks = document.querySelectorAll('.apple-nav a');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navLinks.forEach(link => {
+            link.classList.toggle(
+              'active',
+              link.getAttribute('href') === '#' + id
+            );
+          });
+        }
+      });
+    }, {
+      // The observer will trigger when at least 50% of the section is visible.
+      threshold: 0.5 // You can adjust this value (e.g., 0.3 or 0.6) to change when the nav highlight triggers.
+    });
+
+    sections.forEach(sec => observer.observe(sec));
+  });
+</script>
+
+<!-- Pop Up Script -->
+<script>
+  function openModal(key) {
+    document.getElementById('modal-' + key).style.display = 'block';
+  }
+  function closeModal(key) {
+    document.getElementById('modal-' + key).style.display = 'none';
+  }
+</script>
+
+<!-- EmailJS -->
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+  (function () {
+    emailjs.init({
+      publicKey: "GmK-lHLAcSPSHxk45",
+    });
+  })();
+</script>
+
+<script>
+  // Form submit event, call sendMail
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      sendMail();
+    });
+  });
+
+  // Define sendMail function to send the form using EmailJS
+  function sendMail() {
+    // Assemble parameters for EmailJS
+    const params = {
+      first_name: document.getElementById("first_name").value,
+      last_name: document.getElementById("last_name").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("message").value,
+    };
+
+    emailjs
+      .send("service_gqjbak2", "template_8monohl", params)
+      .then(() => {
+        alert("Your message has been sent successfully!");
+        // Optional: add any additional actions after successful send
+        document.getElementById("contact-form").reset();
+      })
+      .catch((err) => {
+        console.error("EmailJS error:", err);
+        alert("Error sending message. Please try again later.");
+      });
+  }
+</script>
+
+
+
+<footer class="footer" style="display: flex; justify-content: center; align-items: center; height: 60px; text-align: center;">
+  <p style="margin: 0;">&copy; 2025 Ruonan Sun. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
